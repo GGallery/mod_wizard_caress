@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.2"
+    client="site"
+    method="upgrade">
+    <name>wizard</name>
+    <author>GGallery</author>
+    <creationDate>September 2017</creationDate>
+    <copyright>Copyright (C) 2014 GGallery</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@ggallery.it</authorEmail>
+    <authorUrl>www.ggallery.it</authorUrl>
+    <version>1.0</version>
+    <description>wizard </description>
+    <files>
+        <filename module="mod_wizard">mod_wizard.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>		
+        <filename>mod_wizard.xml</filename>
+    </files>
+
+<updateservers>
+        <server type="extension" element="com_wizard" name="wizard" priority="1">https://raw.githubusercontent.com/GGallery/mod_wizard_caress/master/modwizardupdate.xml</server>
+    </updateservers>
+
+
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="tipo"
+                    type="list"
+                    disable="separator"
+                    label="Visuale"
+                    description="Varia la vista ottuenuta" 
+                    default="logo">
+                    <option value="attestati">Attestati Conseguiti</option>
+                    <option value="corsiabilitati">I miei corsi</option>
+                
+                </field>
+            </fieldset>
+            
+            <fieldset name="advanced">
+                
+               <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" /> -->
+                    <field
+                    name="lughezzatestocorso"
+                    type="text"
+                    label="Numero caratteri corsi"
+                    description="Il numero di carattari visualizzati nei moduli per i titoli dei corsi"
+                    default="30" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+             
+            </fieldset>
+        </fields>
+    </config>
+    
+</extension>
