@@ -11,7 +11,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@ggallery.it</authorEmail>
     <authorUrl>www.ggallery.it</authorUrl>
-    <version>1.0</version>
+    <version>1.1.0</version>
     <description>wizard </description>
     <files>
         <filename module="mod_wizard">mod_wizard.php</filename>
@@ -36,43 +36,24 @@
                     type="list"
                     disable="separator"
                     label="Visuale"
-                    description="Varia la vista ottuenuta" 
+                    description="Varia la vista ottuenuta"
                     default="logo">
-                    <option value="attestati">Attestati Conseguiti</option>
-                    <option value="corsiabilitati">I miei corsi</option>
-                
+                    <option value="barranav">Barra di navigazione</option>
+                    <!--<option value="attestati">Attestati Conseguiti</option>-->
+                    <!--<option value="corsiabilitati">I miei corsi</option>-->
+
                 </field>
-            </fieldset>
-            
-            <fieldset name="advanced">
-                
-               <field
-                    name="layout"
-                    type="modulelayout"
-                    label="JFIELD_ALT_LAYOUT_LABEL"
-                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" /> -->
-                    <field
-                    name="lughezzatestocorso"
-                    type="text"
-                    label="Numero caratteri corsi"
-                    description="Il numero di carattari visualizzati nei moduli per i titoli dei corsi"
-                    default="30" />
+
                 <field
-                    name="moduleclass_sfx"
-                    type="text"
-                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-                <field
-                    name="cache"
-                    type="list"
-                    default="0"
-                    label="COM_MODULES_FIELD_CACHING_LABEL"
-                    description="COM_MODULES_FIELD_CACHING_DESC">
-                    <option
-                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-                </field>
-             
+                        name="url_glossario"
+                        type="input"
+                        disable="separator"
+                        label="URL glossario"
+                        description="URL glossario"
+                        default="glossario.html"/>
             </fieldset>
+
+
         </fields>
     </config>
     
