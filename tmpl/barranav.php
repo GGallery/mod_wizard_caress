@@ -1,10 +1,9 @@
 <div id="glossary"><a alt="Glossary" title="Glossary"  href="<?php echo $params->get('url_glossario'); ?>">G</a></div>
-
+<div id="wizardbreadcrumbar">
 
 <?php
 if(!$alert)
     $nav = '
-        <div id="wizardbreadcrumbar">
         <ol class="breadcrumb">
         <span class="divider" style="margin-right: 10px;">
                 <img src="components/com_wizard/images/gufo.png" width="30" />
@@ -127,11 +126,12 @@ switch ($step){
 if($alert)
     $nav .= '<li><div id="alert">You are working on wizard, come back clicking here!</div></li>';
 
+
+$nav.="</ol>";
+
 if($step != '')
     echo $nav;
 ?>
 
 
-
-</ol>
 </div>
