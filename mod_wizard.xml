@@ -48,12 +48,12 @@
                 </field>
 
                 <field
-                        name="url_glossario"
-                        type="input"
+                        name="glossario"
+                        type="textarea"
                         disable="separator"
                         label="URL glossario"
                         description="URL glossario"
-                        default="glossario.html"/>
+                        default="<b>HHCP:</b> Home Health Care Providers "/>
             </fieldset>
 
 
