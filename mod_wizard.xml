@@ -53,7 +53,7 @@
                         disable="separator"
                         label="Glossario"
                         description="Glossario"
-                        default="<b>HHCP:</b> Home Health Care Providers "/>
+                        default=""/>
             </fieldset>
 
 
