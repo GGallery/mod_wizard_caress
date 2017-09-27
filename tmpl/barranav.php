@@ -1,4 +1,4 @@
-<div id="glossary"><a alt="Glossary" title="Glossary"  href="<?php echo $params->get('url_glossario'); ?>">G</a></div>
+
 <div id="wizardbreadcrumbar">
 
 <?php
@@ -9,7 +9,7 @@ if(!$alert)
                 <img src="components/com_wizard/images/gufo.png" width="30" />
             You are working on:
         </span>
-    <li><a href="usecase2?">Wizard</a></li>';
+    <li><a href="usecase2.html">Wizard</a></li>';
 else
     $nav = '
         <ol class="breadcrumb big">

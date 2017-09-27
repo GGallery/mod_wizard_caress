@@ -41,6 +41,7 @@
                     description="Varia la vista ottuenuta"
                     default="logo">
                     <option value="barranav">Barra di navigazione</option>
+                    <option value="glossario">Pulsante glossario</option>
                     <!--<option value="attestati">Attestati Conseguiti</option>-->
                     <!--<option value="corsiabilitati">I miei corsi</option>-->
 
