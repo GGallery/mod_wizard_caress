@@ -51,8 +51,8 @@
                         name="glossario"
                         type="textarea"
                         disable="separator"
-                        label="URL glossario"
-                        description="URL glossario"
+                        label="Glossario"
+                        description="Glossario"
                         default="<b>HHCP:</b> Home Health Care Providers "/>
             </fieldset>
 
