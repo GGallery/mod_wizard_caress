@@ -69,7 +69,7 @@ switch ($step){
                     <li>Country</li>';
 
         $nav.=' <span class="divider"><img src="media/system/images/arrow.png" alt=""></span>
-                    <li class="active"><a href="usecase2?view=case2&tipo=a3/a></li>';
+                    <li class="active"><a href="usecase2?view=case2&tipo=a3"</a></li>';
         break;
     case 'b':
         $nav .= '
