@@ -12,8 +12,8 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@ggallery.it</authorEmail>
     <authorUrl>www.ggallery.it</authorUrl>
-    <version>1.3.6</version>
-    <description>wizard </description>
+    <version>1.3.7</version>
+    <description>Caress Wizard Module</description>
     <files>
         <filename module="mod_wizard">mod_wizard.php</filename>
         <folder>tmpl</folder>
@@ -50,11 +50,13 @@
 
                 <field
                         name="glossario"
-                        type="textarea"
+                        type="editor"
                         disable="separator"
                         label="Glossario"
                         description="Glossario"
-                        default=""/>
+                        default=""
+
+                />
             </fieldset>
 
 
