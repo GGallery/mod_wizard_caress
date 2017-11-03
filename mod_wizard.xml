@@ -11,7 +11,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@ggallery.it</authorEmail>
     <authorUrl>www.ggallery.it</authorUrl>
-    <version>1.3.2</version>
+    <version>1.3.3</version>
     <description>wizard </description>
     <files>
         <filename module="mod_wizard">mod_wizard.php</filename>
