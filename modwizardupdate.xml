@@ -6,7 +6,7 @@
 		<element>mod_wizard</element>
 		<type>module</type>
 		<folder></folder>
-		<version>1.3.5</version>
+		<version>1.3.6</version>
 		<infourl title="Wizard  - github">https://github.com/GGallery/mod_wizard_caress</infourl>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/GGallery/mod_wizard_caress/archive/master.zip</downloadurl>
