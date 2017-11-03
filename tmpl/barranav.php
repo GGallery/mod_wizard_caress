@@ -1,8 +1,8 @@
 <div id="wizardbreadcrumbar">
     <?php
-    $nav= '<input type="button" class="btn btn-success btn-small " id="exitbtn" value="Exit Wizard">';
+
     if(!$alert)
-        $nav .= '
+        $nav = '
         <ol class="breadcrumb">
         <span class="divider" style="margin-right: 10px;">
                 <img src="components/com_wizard/images/gufo.png" width="30" />
@@ -10,7 +10,7 @@
         </span>
     <li><a href="usecase2.html">Wizard</a></li>';
     else
-        $nav .= '
+        $nav = '
         <ol class="breadcrumb big">
         <span class="divider" style="margin-right: 10px;">
                 <img src="components/com_wizard/images/gufo.png" width="50" />
@@ -122,6 +122,8 @@
             break;
     }
 
+
+
     if($alert)
         $nav .= '<li><div id="alert">You are working on framework, to come back to wizard click here!</div></li>';
 
@@ -134,6 +136,21 @@
 
 
 </div>
+
+
+
+<?php
+if($step != ''){
+?>
+    <div id="exitbox">
+        <input type="button" class="btn btn-success btn-small " id="exitbtn" value="Exit Wizard">
+    </div>
+<?php
+}
+?>
+
+
+
 
 
 <script type="application/javascript">

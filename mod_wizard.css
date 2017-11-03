@@ -31,6 +31,12 @@
 }
 
 #exitbtn {
-	position: absolute;
+	position: relative;
 	right: 0px;
+}
+
+#exitbox
+{
+	text-align: right;
+	margin-top: -30px;
 }
