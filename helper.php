@@ -2,19 +2,19 @@
 defined('_JEXEC') or die;
 
 class modwizardHelper {
-  private static $_attestati;
-  private static $_corsi;
+    private static $_attestati;
+    private static $_corsi;
 
-  public function getAttestati() {
-    try {
+    public function getAttestati() {
+        try {
 
-      $db = JFactory::getDbo();
+            $db = JFactory::getDbo();
 
-      $user = JFactory::getUser();
-      $userid = $user->get('id');
+            $user = JFactory::getUser();
+            $userid = $user->get('id');
 
 
-      $query = "SELECT DISTINCT   
+            $query = "SELECT DISTINCT   
       c.corso, e.id
       FROM
                   #__quiz_r_student_quiz AS q
@@ -33,37 +33,37 @@ class modwizardHelper {
 
 
 
-      $db->setQuery($query);
-      if (false === ($results = $db->loadAssocList()))
+            $db->setQuery($query);
+            if (false === ($results = $db->loadAssocList()))
 
-       throw new RuntimeException($this->_db->getErrorMsg(), E_USER_ERROR);
-
-
-    //  if(empty($results[1]))
-    //   $out[]=$results;
-    // else
-     $out=$results;
-
-     self::$_attestati = $out;
-
-     return self::$_attestati;
-
-   } catch (Exception $e) {
-    return array();
-  }
-}
+                throw new RuntimeException($this->_db->getErrorMsg(), E_USER_ERROR);
 
 
-public function getCorsi() {
-  try {           
+            //  if(empty($results[1]))
+            //   $out[]=$results;
+            // else
+            $out=$results;
 
-    $db = JFactory::getDbo();
+            self::$_attestati = $out;
 
-    $user = JFactory::getUser();
-    $userid = $user->get('id');               
+            return self::$_attestati;
+
+        } catch (Exception $e) {
+            return array();
+        }
+    }
 
 
-    $query = "SELECT 
+    public function getCorsi() {
+        try {
+
+            $db = JFactory::getDbo();
+
+            $user = JFactory::getUser();
+            $userid = $user->get('id');
+
+
+            $query = "SELECT 
 
     corsi_abilitati
 
@@ -78,47 +78,47 @@ public function getCorsi() {
 where scaduto = 0 or scaduto is null";
 
 
-$db->setQuery($query);
-if (false === ($results = $db->loadAssocList()))
+            $db->setQuery($query);
+            if (false === ($results = $db->loadAssocList()))
 
- throw new RuntimeException($this->_db->getErrorMsg(), E_USER_ERROR);
+                throw new RuntimeException($this->_db->getErrorMsg(), E_USER_ERROR);
 
-  // if(!$results[1])
-  //  $out[]=$results;
-  // else
-$out=$results;
+            // if(!$results[1])
+            //  $out[]=$results;
+            // else
+            $out=$results;
 
- // in questa parte concateno in un unica stringa, affinchè possa poi passarla alla successiva query, tutti gli elemnti dell'array         
+            // in questa parte concateno in un unica stringa, affinchè possa poi passarla alla successiva query, tutti gli elemnti dell'array
 
-  $abilitati='';       // dichiaro una stringa
-  if($out[0])           //controllo la stringa non sia vuota
+            $abilitati='';       // dichiaro una stringa
+            if($out[0])           //controllo la stringa non sia vuota
 
-  {
-    foreach($out as $listaidcorsi)
-        $abilitati.=",".$listaidcorsi['corsi_abilitati'];   //concateno la virgola con la stringa lista corsi
-    }
+            {
+                foreach($out as $listaidcorsi)
+                    $abilitati.=",".$listaidcorsi['corsi_abilitati'];   //concateno la virgola con la stringa lista corsi
+            }
 
-$abilitati=substr($abilitati, 1);  
+            $abilitati=substr($abilitati, 1);
 
 // Associo l'ID corso al nome per esteso
-$query = "SELECT 
+            $query = "SELECT 
             *
           FROM 
             #__gg_corsi as c
            where c.id in ($abilitati)";
-          
 
-     $db->setQuery($query);
-     if (false === ($risultato = $db->loadAssocList()))
-      throw new RuntimeException($this->_db->getErrorMsg(), E_USER_ERROR);
 
-    self::$_corsi = $risultato;  
-    return self::$_corsi;
+            $db->setQuery($query);
+            if (false === ($risultato = $db->loadAssocList()))
+                throw new RuntimeException($this->_db->getErrorMsg(), E_USER_ERROR);
 
-  }  catch (Exception $e) {
-    return array();
-  }
-}
+            self::$_corsi = $risultato;
+            return self::$_corsi;
+
+        }  catch (Exception $e) {
+            return array();
+        }
+    }
 }
 
 ?>
