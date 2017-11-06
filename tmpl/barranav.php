@@ -143,7 +143,7 @@
 if($step != ''){
 ?>
     <div id="exitbox">
-        <input type="button" class="btn btn-success btn-small " id="exitbtn" value="Exit Wizard">
+        <input type="button" class="btn btn-primary btn-small " id="exitbtn" value="Exit Wizard">
     </div>
 <?php
 }
